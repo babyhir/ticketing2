@@ -10,41 +10,41 @@ spec:
     #- host: ticketing.dev
   - http:
     paths:
-    pathType:
-      - path: /api/payments/?(.*)
-        pathType:
-        backend:
-          service:
-            name: payments-srv
-            port:
-              number: 3000
-          #serviceName: payments-srv
-          #servicePort: 3000
-      - path: /api/users/?(.*)
-        pathType:
-        backend:
-          service:
-            name: auth-srv
-            port:
-              number: 3000
-      - path: /api/tickets/?(.*)
-        pathType:
-        backend:
-          service:
-            name: tickets-srv
-            port:
-              number: 3000
-      - path: /api/orders/?(.*)
-        pathType:
-        backend:
-          service:
-            name: orders-srv
-            port:
-              number: 3000
-      - path: /?(.*)
-        pathType:
-        backend:
-          service:
-            name: client-srv
-            port:
-              number: 3000
+      pathType:
+        - path: /api/payments/?(.*)
+          pathType:
+          backend:
+            service:
+              name: payments-srv
+              port:
+                number: 3000
+            #serviceName: payments-srv
+            #servicePort: 3000
+        - path: /api/users/?(.*)
+          pathType:
+          backend:
+            service:
+              name: auth-srv
+              port:
+                number: 3000
+        - path: /api/tickets/?(.*)
+          pathType:
+          backend:
+            service:
+              name: tickets-srv
+              port:
+                number: 3000
+        - path: /api/orders/?(.*)
+          pathType:
+          backend:
+            service:
+              name: orders-srv
+              port:
+                number: 3000
+        - path: /?(.*)
+          pathType:
+          backend:
+            service:
+              name: client-srv
+              port:
+                number: 3000

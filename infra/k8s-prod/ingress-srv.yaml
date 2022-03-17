@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1  #extensions/v1beta1 #v0.47.x #networking.k8s.io/v1 #extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-service
@@ -7,41 +7,39 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
   rules:
-    - host: ticketing.dev
+    - host: www.ticketing-app-prod.xyz
       http:
         paths:
           - path: /api/payments/?(.*)
-            pathType:
+            pathType: Prefix
             backend:
               service:
                 name: payments-srv
                 port:
                   number: 3000
-              #serviceName: payments-srv
-              #servicePort: 3000
           - path: /api/users/?(.*)
-            pathType:
+            pathType: Prefix
             backend:
               service:
                 name: auth-srv
                 port:
                   number: 3000
           - path: /api/tickets/?(.*)
-            pathType:
+            pathType: Prefix
             backend:
               service:
                 name: tickets-srv
                 port:
                   number: 3000
           - path: /api/orders/?(.*)
-            pathType:
+            pathType: Prefix
             backend:
               service:
                 name: orders-srv
                 port:
                   number: 3000
           - path: /?(.*)
-            pathType:
+            pathType: Prefix
             backend:
               service:
                 name: client-srv

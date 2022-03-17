@@ -10,8 +10,8 @@ spec:
     - host: ticketing.dev
       http:
         paths:
-        pathType:
           - path: /api/payments/?(.*)
+            pathType:
             backend:
               service:
                 name: payments-srv

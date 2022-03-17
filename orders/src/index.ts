@@ -7,8 +7,8 @@ import { ExpirationCompleteListener } from './events/listeners/expiration-comple
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
 const start = async () => {
-  if (!process.env.JWT_KEY) { // Random added comment for file change  | Please remove after use
-    throw new Error('JWT_KEY must be defined');
+
+    throw new Error('JWT_KEY must be defined'); // Some comment for trigger // Comment x2 // 3rd Comment
   }
   if (!process.env.MONGO_URI) {
     throw new Error('MONGO_URI must be defined');

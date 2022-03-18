@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: babyhir/orders
+          image: cygnetops/orders
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

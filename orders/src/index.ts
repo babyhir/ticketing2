@@ -6,8 +6,8 @@ import { TicketUpdatedListener } from './events/listeners/ticket-updated-listene
 import { ExpirationCompleteListener } from './events/listeners/expiration-complete-listener';
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
-const start = async () => {
-  if (!process.env.JWT_KEY) { // Random added comment for file change  | Please remove after use
+const start = async () => { 
+  if (!process.env.JWT_KEY) {
     throw new Error('JWT_KEY must be defined');
   }
   if (!process.env.MONGO_URI) {
@@ -16,7 +16,7 @@ const start = async () => {
   if (!process.env.NATS_CLIENT_ID) {
     throw new Error('NATS_CLIENT_ID must be defined');
   }
-  if (!process.env.NATS_URL) {
+  if (!process.env.NATS_URL) { 
     throw new Error('NATS_URL must be defined');
   }
   if (!process.env.NATS_CLUSTER_ID) {

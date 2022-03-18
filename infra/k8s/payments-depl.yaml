@@ -4,7 +4,7 @@ metadata:
   name: payments-depl
 spec:
   replicas: 1
-  selector:
+  selector: #
     matchLabels:
       app: payments
   template:
